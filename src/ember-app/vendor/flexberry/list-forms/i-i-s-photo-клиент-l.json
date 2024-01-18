@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-photo-клиент-e",
+  "editForm": "i-i-s-photo-клиент-e",
+  "external": false,
+  "caption": "Клиент",
+  "name": "IISPhotoКлиентL",
+  "className": "КлиентL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-photo-клиент",
+      "modelProjection": "КлиентL"
+    }
+  ]
+}

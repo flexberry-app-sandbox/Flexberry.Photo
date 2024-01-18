@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Photo",
+  "applicationTitle": "Photo",
+  "items": [
+    {
+      "link": null,
+      "menuName": "photo",
+      "caption": "Photo",
+      "title": "Photo",
+      "children": [
+        {
+          "link": "i-i-s-photo-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-photo-фотокиоск-l",
+          "menuName": null,
+          "caption": "Фотокиоск",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-photo-оплата-l",
+          "menuName": null,
+          "caption": "Оплата",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

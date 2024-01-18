@@ -1,0 +1,85 @@
+<h3 class="ui header">{{t "forms.i-i-s-photo-фотокиоск-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.iD
+      class=(if (v-get validationModel "iD" "isInvalid") "error")
+      label=(t "forms.i-i-s-photo-фотокиоск-e.iD-caption")
+      data-test-i-i-s-photo-фотокиоск-e-iD=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "iD" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.адрес
+      class=(if (v-get validationModel "адрес" "isInvalid") "error")
+      label=(t "forms.i-i-s-photo-фотокиоск-e.адрес-caption")
+      data-test-i-i-s-photo-фотокиоск-e-адрес=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "адрес" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.состояние
+      class=(if (v-get validationModel "состояние" "isInvalid") "error")
+      label=(t "forms.i-i-s-photo-фотокиоск-e.состояние-caption")
+      data-test-i-i-s-photo-фотокиоск-e-состояние=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "состояние" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-photo-фотокиоск-e.оборудование-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="оборудованиеGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.оборудование
+      content=model.оборудование
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "оборудование" "isInvalid") "error")
+      data-test-i-i-s-photo-фотокиоск-e-оборудование=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оборудование" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-photo-фотокиоск-e.чек-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="чекGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.чек
+      content=model.чек
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "чек" "isInvalid") "error")
+      data-test-i-i-s-photo-фотокиоск-e-чек=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "чек" "message")}}
+  </div>
+</form>

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-photo-оплата-e",
+  "editForm": "i-i-s-photo-оплата-e",
+  "external": false,
+  "caption": "Оплата",
+  "name": "IISPhotoОплатаL",
+  "className": "ОплатаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-photo-оплата",
+      "modelProjection": "ОплатаL"
+    }
+  ]
+}

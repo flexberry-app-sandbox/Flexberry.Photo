@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISPhotoОборудование",
+  "modelName": "i-i-s-photo-оборудование",
+  "className": "Оборудование",
+  "nameSpace": "IIS.Photo",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "iD",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "фотокиоск",
+      "relatedTo": "i-i-s-photo-фотокиоск",
+      "inverse": "оборудование"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ОборудованиеE",
+      "modelName": "i-i-s-photo-оборудование",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

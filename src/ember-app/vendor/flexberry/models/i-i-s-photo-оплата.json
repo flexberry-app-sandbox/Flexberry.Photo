@@ -1,0 +1,118 @@
+﻿{
+  "name": "IISPhotoОплата",
+  "modelName": "i-i-s-photo-оплата",
+  "className": "Оплата",
+  "nameSpace": "IIS.Photo",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типОплаты",
+      "type": "i-i-s-photo-оплаты",
+      "flexberryType": "Оплаты",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент",
+      "relatedTo": "i-i-s-photo-клиент",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "фото",
+      "relatedTo": "i-i-s-photo-фото",
+      "inverse": "оплата"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ОплатаE",
+      "modelName": "i-i-s-photo-оплата",
+      "attrs": [
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ФотоE",
+          "caption": "Фото",
+          "name": "фото",
+          "relatedTo": "i-i-s-photo-фото",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ОплатаL",
+      "modelName": "i-i-s-photo-оплата",
+      "attrs": [
+        {
+          "name": "типОплаты",
+          "caption": "Тип оплаты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

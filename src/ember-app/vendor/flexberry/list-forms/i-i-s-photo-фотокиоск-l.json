@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-photo-фотокиоск-e",
+  "editForm": "i-i-s-photo-фотокиоск-e",
+  "external": false,
+  "caption": "Фотокиоск",
+  "name": "IISPhotoФотокиоскL",
+  "className": "ФотокиоскL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-photo-фотокиоск",
+      "modelProjection": "ФотокиоскL"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+﻿{
+  "name": "IISPhotoЧек",
+  "modelName": "i-i-s-photo-чек",
+  "className": "Чек",
+  "nameSpace": "IIS.Photo",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "оплата",
+      "relatedTo": "i-i-s-photo-оплата",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "фотокиоск",
+      "relatedTo": "i-i-s-photo-фотокиоск",
+      "inverse": "чек"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЧекE",
+      "modelName": "i-i-s-photo-чек",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

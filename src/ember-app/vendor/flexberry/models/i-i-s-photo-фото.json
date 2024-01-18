@@ -1,0 +1,93 @@
+﻿{
+  "name": "IISPhotoФото",
+  "modelName": "i-i-s-photo-фото",
+  "className": "Фото",
+  "nameSpace": "IIS.Photo",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "длина",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "режим",
+      "type": "i-i-s-photo-режимы",
+      "flexberryType": "Режимы",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "ширина",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "оплата",
+      "relatedTo": "i-i-s-photo-оплата",
+      "inverse": "фото"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ФотоE",
+      "modelName": "i-i-s-photo-фото",
+      "attrs": [
+        {
+          "name": "режим",
+          "caption": "Режим",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "длина",
+          "caption": "Длина",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "ширина",
+          "caption": "Ширина",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

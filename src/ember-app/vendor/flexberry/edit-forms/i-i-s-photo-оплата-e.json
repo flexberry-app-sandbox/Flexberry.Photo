@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Оплата",
+  "name": "IISPhotoОплатаE",
+  "className": "ОплатаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-photo-оплата",
+      "modelProjection": "ОплатаE"
+    }
+  ]
+}

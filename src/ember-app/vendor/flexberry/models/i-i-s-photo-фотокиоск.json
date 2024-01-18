@@ -1,0 +1,122 @@
+﻿{
+  "name": "IISPhotoФотокиоск",
+  "modelName": "i-i-s-photo-фотокиоск",
+  "className": "Фотокиоск",
+  "nameSpace": "IIS.Photo",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "iD",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "адрес",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состояние",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "оборудование",
+      "relatedTo": "i-i-s-photo-оборудование",
+      "inverse": "фотокиоск"
+    },
+    {
+      "name": "чек",
+      "relatedTo": "i-i-s-photo-чек",
+      "inverse": "фотокиоск"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ФотокиоскE",
+      "modelName": "i-i-s-photo-фотокиоск",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "состояние",
+          "caption": "Состояние",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ОборудованиеE",
+          "caption": "Оборудование",
+          "name": "оборудование",
+          "relatedTo": "i-i-s-photo-оборудование",
+          "inverse": null
+        },
+        {
+          "projectionName": "ЧекE",
+          "caption": "Чек",
+          "name": "чек",
+          "relatedTo": "i-i-s-photo-чек",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ФотокиоскL",
+      "modelName": "i-i-s-photo-фотокиоск",
+      "attrs": [
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "адрес",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "состояние",
+          "caption": "Состояние",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

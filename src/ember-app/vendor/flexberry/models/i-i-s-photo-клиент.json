@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISPhotoКлиент",
+  "modelName": "i-i-s-photo-клиент",
+  "className": "Клиент",
+  "nameSpace": "IIS.Photo",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "email",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "iD",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "КлиентE",
+      "modelName": "i-i-s-photo-клиент",
+      "attrs": [
+        {
+          "name": "email",
+          "caption": "Email",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "КлиентL",
+      "modelName": "i-i-s-photo-клиент",
+      "attrs": [
+        {
+          "name": "email",
+          "caption": "Email",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "iD",
+          "caption": "ID",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
